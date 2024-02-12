@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Using Form</title>
+    <style>
+      /* css for form tag */
+      form {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="calculatorForm">
+      <!-- Number 1 input -->
+      <section>
+        <label for="num1">Enter Number 1:</label>
+        <input type="number" id="num1" required />
+      </section>
+
+      <!-- Dropdown operator selection tag -->
+      <section>
+        <label for="operator">Select Operator:</label>
+        <select id="operator" required>
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+      </section>
+
+      <!-- Number 2 input -->
+      <section>
+        <label for="num2">Enter Number 2:</label>
+        <input type="number" id="num2" required />
+      </section>
+
+      <button type="button" onclick="calculate()">Calculate</button>
+
+      <!-- Result section -->
+      <p id="result"></p>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
+</html>
